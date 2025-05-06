@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academic and professional portfolio of Dennis Jung, PhD student in Finance at Technical University of Darmstadt">
+    <meta name="keywords" content="academic, PhD, finance, portfolio management, asset allocation, machine learning">
+    <title>Dennis Jung - PhD Researcher in Finance</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        :root {
+            --primary-color: #2962ff;
+            --secondary-color: #0039cb;
+            --text-color: #333;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --dark-gray: #757575;
+            --spacing-unit: 1rem;
+        }
+        
+        .section-intro {
+            font-style: italic;
+            margin-bottom: var(--spacing-unit);
+            color: var(--dark-gray);
+        }
+        
+        ul {
+            margin-left: 1.5rem;
+            margin-bottom: var(--spacing-unit);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-gray);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        header {
+            padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--spacing-unit);
+            flex-direction: column;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+            margin-bottom: var(--spacing-unit);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            margin-bottom: var(--spacing-unit);
+        }
+        
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: var(--spacing-unit);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 calc(var(--spacing-unit) * 0.5);
+        }
+        
+        nav a {
+            font-weight: 500;
+            padding: calc(var(--spacing-unit) * 0.5);
+        }
+        
+        main {
+            padding: calc(var(--spacing-unit) * 2);
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        section {
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--medium-gray);
+            padding-bottom: calc(var(--spacing-unit) * 0.5);
+            margin-bottom: var(--spacing-unit);
+        }
+        
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: var(--spacing-unit);
+        }
+        
+        .research-interest {
+            background-color: var(--light-gray);
+            border-radius: 50px;
+            padding: calc(var(--spacing-unit) * 0.5) var(--spacing-unit);
+            margin: 0 calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 0.5) 0;
+            font-size: 0.9rem;
+        }
+        
+        .publication {
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            padding-bottom: var(--spacing-unit);
+            border-bottom: 1px dashed var(--medium-gray);
+        }
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
+        }
+        
+        .publication-authors {
+            font-style: italic;
+            margin-bottom: calc(var(--spacing-unit) * 0.25);
+        }
+        
+        .publication-venue {
+            margin-bottom: calc(var(--spacing-unit) * 0.25);
+        }
+        
+        .publication-links {
+            margin-top: calc(var(--spacing-unit) * 0.5);
+        }
+        
+        .publication-links a {
+            display: inline-block;
+            margin-right: calc(var(--spacing-unit) * 0.75);
+            background-color: var(--light-gray);
+            padding: calc(var(--spacing-unit) * 0.25) calc(var(--spacing-unit) * 0.5);
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .education-item, .experience-item {
+            margin-bottom: var(--spacing-unit);
+        }
+        
+        .edu-date, .exp-date {
+            font-weight: 700;
+            color: var(--dark-gray);
+        }
+        
+        .edu-degree, .exp-role {
+            font-weight: 600;
+        }
+        
+        .edu-institution, .exp-organization {
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            padding: calc(var(--spacing-unit) * 2);
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        .social-links {
+            margin-top: var(--spacing-unit);
+        }
+        
+        .social-links a {
+            margin: 0 calc(var(--spacing-unit) * 0.5);
+            text-decoration: none;
+        }
+        
+        .contact-info {
+            margin: var(--spacing-unit) 0;
+        }
+        
+        .contact-info p {
+            margin-bottom: calc(var(--spacing-unit) * 0.5);
+        }
+        
+        @media (min-width: 768px) {
+            .profile-container {
+                flex-direction: row;
+                text-align: left;
+            }
+            
+            .profile-pic {
+                margin-right: calc(var(--spacing-unit) * 2);
+                margin-bottom: 0;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            header, main {
+                padding: var(--spacing-unit);
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            nav li {
+                margin-bottom: calc(var(--spacing-unit) * 0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Profile Photo of Dennis Jung" class="profile-pic">
+            <div>
+                <h1>Dennis Jung</h1>
+                <p class="subtitle">PhD Student in Finance<br>Technical University of Darmstadt</p>
+                <p>Bridging 10+ years of portfolio management expertise with academic research in finance</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="cv.pdf" target="_blank">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a PhD student at <a href="https://www.tu-darmstadt.de">Technical University of Darmstadt</a> in the Department of Finance. My research focuses on applying machine learning techniques to asset pricing and portfolio optimization. With over a decade of experience in portfolio management, I bring a unique practical perspective to my academic work.</p>
+            
+            <p>My research is particularly informed by my professional experience in asset allocation and portfolio construction, allowing me to bridge theoretical frameworks with real-world applications. I am currently working with <a href="https://www.wiwi.tu-darmstadt.de/schiereck">Prof. Dr. Dirk Schiereck</a> on my thesis titled "Machine Learning in Asset Pricing."</p>
+            
+            <p>My research interests include:</p>
+            
+            <div class="research-interests">
+                <span class="research-interest">Machine Learning in Finance</span>
+                <span class="research-interest">Asset Pricing</span>
+                <span class="research-interest">Portfolio Optimization</span>
+                <span class="research-interest">Factor Investing</span>
+                <span class="research-interest">Portfolio Management</span>
+                <span class="research-interest">Investment Strategy</span>
+                <span class="research-interest">Risk Management</span>
+            </div>
+        </section>
+        
+        <section id="research">
+            <h2>Current Research</h2>
+            <p>My current research explores the application of machine learning techniques to enhance asset pricing models and portfolio optimization strategies. By leveraging advanced algorithms, I aim to identify non-linear patterns in financial data that traditional models may overlook, ultimately improving risk-adjusted returns.</p>
+            
+            <p>My research is uniquely informed by my extensive professional experience in portfolio management. This practical background allows me to identify research questions with high real-world relevance and develop solutions that address actual challenges faced by industry practitioners.</p>
+            
+            <p>I employ a combination of Python-based machine learning frameworks (e.g., TensorFlow, scikit-learn) and financial data platforms (e.g., Bloomberg, Refinitiv Eikon) to conduct my analyses. My work also involves developing proprietary indicators and fair value models to support discretionary investment decisions.</p>
+            
+            <p>Key industry insights incorporated in my research:</p>
+            <ul>
+                <li>Practical experience in managing multi-asset portfolios informs my approach to risk management and asset allocation.</li>
+                <li>Insights from developing tailor-made portfolio services for ultra-high-net-worth individuals guide my focus on client-centric solutions.</li>
+                <li>My approach integrates industry-relevant metrics, such as risk-adjusted performance and portfolio drawdowns, unlike purely theoretical models.</li>
+            </ul>
+            
+            <p>For more details about my research, please see my <a href="#publications">publications</a> or download my <a href="cv.pdf" target="_blank">CV</a>.</p>
+        </section>
+        
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="publication">
+                <p class="publication-title">Value Investing Across Asset Classes</p>
+                <p class="publication-authors">A. Isiksal, A. Backhaus, <b>Dennis Jung</b></p>
+                <p class="publication-venue">Economic Research, 32:1, 1407-1429, Summer 2019</p>
+                <div class="publication-links">
+                    <a href="https://doi.org/10.1080/1331677X.2019.1636696" target="_blank">DOI</a>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <p class="publication-title">Do Sectors Matter for Commodity Pricing?</p>
+                <p class="publication-authors">D. Bianchi, <b>Dennis Jung</b></p>
+                <p class="publication-venue">Under Review, 2025</p>
+                <div class="publication-links">
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5182513" target="_blank">SSRN</a>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <p class="publication-title">The Profitability of Data Mining Anomalies using Machine Learning</p>
+                <p class="publication-authors">V. Azevedo, <b>Dennis Jung</b></p>
+                <p class="publication-venue">Working Paper, 2025</p>
+                <div class="publication-links">
+                    <a href="#" target="_blank">TBD</a>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <p class="publication-title">Business Cycle Sector Rotation with Machine Learning</p>
+                <p class="publication-authors">V. Azevedo, <b>Dennis Jung</b></p>
+                <p class="publication-venue">Working Paper, 2025</p>
+                <div class="publication-links">
+                    <a href="#" target="_blank">TBD</a>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <p class="publication-title">Robust Portfolio Optimization Tool in Python</p>
+                <p class="publication-authors"><b>Dennis Jung</b></p>
+                <p class="publication-venue">Coding Project, 2024</p>
+                <div class="publication-links">
+                    <a href="https://github.com/Codes-Dennis-Jung/Robust_Portfolio_Optimization" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <p class="edu-date">2021 - Present</p>
+                <p class="edu-degree">PhD in Finance</p>
+                <p class="edu-institution">Technical University of Darmstadt, Germany</p>
+                <p>Thesis: "Machine Learning in Asset Pricing" (Advisor: Prof. Dr. Dirk Schiereck)</p>
+            </div>
+            
+            <div class="education-item">
+                <p class="edu-date">2012 - 2015</p>
+                <p class="edu-degree">M.Sc. Business & Engineering, Major Finance & Economics</p>
+                <p class="edu-institution">University of Technology Clausthal, Germany</p>
+                <p>Thesis: "Multi-Asset Allocation Models Compared - An Empirical Analysis of Portfolio Optimization and Naive Investment Strategies" (GPA: 1.8 / 1st class)</p>
+            </div>
+            
+            <div class="education-item">
+                <p class="edu-date">2014 - 2015</p>
+                <p class="edu-degree">M.Sc. Finance and Economic Analysis (Study Abroad - ERASMUS)</p>
+                <p class="edu-institution">Tallinn University of Technology, Estonia</p>
+                <p>GPA: 1.0 / 1st class</p>
+            </div>
+            
+            <div class="education-item">
+                <p class="edu-date">2013 - 2013</p>
+                <p class="edu-degree">M.Sc. Economics and Finance (Study Abroad - Scholarship)</p>
+                <p class="edu-institution">University of Luxembourg, Luxembourg</p>
+                <p>GPA: 2.3 / 1st class</p>
+            </div>
+            
+            <div class="education-item">
+                <p class="edu-date">2009 - 2012</p>
+                <p class="edu-degree">B.Sc. Business & Engineering</p>
+                <p class="edu-institution">University of Applied Sciences Saarbrücken, Germany</p>
+                <p>GPA: 2.5 / 2nd class</p>
+            </div>
+            
+            <div class="education彼此:education-item {
+                margin-bottom: var(--spacing-unit);
+            }
+            
+            .edu-date, .exp-date {
+                font-weight: 700;
+                color: var(--dark-gray);
+            }
+            
+            .edu-degree, .exp-role {
+                font-weight: 600;
+            }
+            
+            .edu-institution, .exp-organization {
+                font-style: italic;
+            }
+            
+            footer {
+                text-align: center;
+                padding: calc(var(--spacing-unit) * 2);
+                background-color: var(--light-gray);
+                color: var(--dark-gray);
+                font-size: 0.9rem;
+            }
+            
+            .social-links {
+                margin-top: var(--spacing-unit);
+            }
+            
+            .social-links a {
+                margin: 0 calc(var(--spacing-unit) * 0.5);
+                text-decoration: none;
+            }
+            
+            .contact-info {
+                margin: var(--spacing-unit) 0;
+            }
+            
+            .contact-info p {
+                margin-bottom: calc(var(--spacing-unit) * 0.5);
+            }
+            
+            @media (min-width: 768px) {
+                .profile-container {
+                    flex-direction: row;
+                    text-align: left;
+                }
+                
+                .profile-pic {
+                    margin-right: calc(var(--spacing-unit) * 2);
+                    margin-bottom: 0;
+                }
+            }
+            
+            @media (max-width: 767px) {
+                header, main {
+                    padding: var(--spacing-unit);
+                }
+                
+                h1 {
+                    font-size: 1.75rem;
+                }
+                
+                .subtitle {
+                    font-size: 1rem;
+                }
+                
+                nav li {
+                    margin-bottom: calc(var(--spacing-unit) * 0.5);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="profile-container">
+                <img src="profile.jpg" alt="Profile Photo of Dennis Jung" class="profile-pic">
+                <div>
+                    <h1>Dennis Jung</h1>
+                    <p class="subtitle">PhD Student in Finance<br>Technical University of Darmstadt</p>
+                    <p>Bridging 10+ years of portfolio management expertise with academic research in finance</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="cv.pdf" target="_blank">CV</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I am a PhD student at <a href="https://www.tu-darmstadt.de">Technical University of Darmstadt</a> in the Department of Finance. My research focuses on applying machine learning techniques to asset pricing and portfolio optimization. With over a decade of experience in portfolio management, I bring a unique practical perspective to my academic work.</p>
+                
+                <p>My research is particularly informed by my professional experience in asset allocation and portfolio construction, allowing me to bridge theoretical frameworks with real-world applications. I am currently working with <a href="https://www.wiwi.tu-darmstadt.de/schiereck">Prof. Dr. Dirk Schiereck</a> on my thesis titled "Machine Learning in Asset Pricing."</p>
+                
+                <p>My research interests include:</p>
+                
+                <div class="research-interests">
+                    <span class="research-interest">Machine Learning in Finance</span>
+                    <span class="research-interest">Asset Pricing</span>
+                    <span class="research-interest">Portfolio Optimization</span>
+                    <span class="research-interest">Factor Investing</span>
+                    <span class="research-interest">Portfolio Management</span>
+                    <span class="research-interest">Investment Strategy</span>
+                    <span class="research-interest">Risk Management</span>
+                </div>
+            </section>
+            
+            <section id="research">
+                <h2>Current Research</h2>
+                <p>My current research explores the application of machine learning techniques to enhance asset pricing models and portfolio optimization strategies. By leveraging advanced algorithms, I aim to identify non-linear patterns in financial data that traditional models may overlook, ultimately improving risk-adjusted returns.</p>
+                
+                <p>My research is uniquely informed by my extensive professional experience in portfolio management. This practical background allows me to identify research questions with high real-world relevance and develop solutions that address actual challenges faced by industry practitioners.</p>
+                
+                <p>I employ a combination of Python-based machine learning frameworks (e.g., TensorFlow, scikit-learn) and financial data platforms (e.g., Bloomberg, Refinitiv Eikon) to conduct my analyses. My work also involves developing proprietary indicators and fair value models to support discretionary investment decisions.</p>
+                
+                <p>Key industry insights incorporated in my research:</p>
+                <ul>
+                    <li>Practical experience in managing multi-asset portfolios informs my approach to risk management and asset allocation.</li>
+                    <li>Insights from developing tailor-made portfolio services for ultra-high-net-worth individuals guide my focus on client-centric solutions.</li>
+                    <li>My approach integrates industry-relevant metrics, such as risk-adjusted performance and portfolio drawdowns, unlike purely theoretical models.</li>
+                </ul>
+                
+                <p>For more details about my research, please see my <a href="#publications">publications</a> or download my <a href="cv.pdf" target="_blank">CV</a>.</p>
+            </section>
+            
+            <section id="publications">
+                <h2>Publications</h2>
+                
+                <div class="publication">
+                    <p class="publication-title">Value Investing Across Asset Classes</p>
+                    <p class="publication-authors">A. Isiksal, A. Backhaus, <b>Dennis Jung</b></p>
+                    <p class="publication-venue">Economic Research, 32:1, 1407-1429, Summer 2019</p>
+                    <div class="publication-links">
+                        <a href="https://doi.org/10.1080/1331677X.2019.1636696" target="_blank">DOI</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <p class="publication-title">Do Sectors Matter for Commodity Pricing?</p>
+                    <p class="publication-authors">D. Bianchi, <b>Dennis Jung</b></p>
+                    <p class="publication-venue">Under Review, 2025</p>
+                    <div class="publication-links">
+                        <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5182513" target="_blank">SSRN</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <p class="publication-title">The Profitability of Data Mining Anomalies using Machine Learning</p>
+                    <p class="publication-authors">V. Azevedo, <b>Dennis Jung</b></p>
+                    <p class="publication-venue">Working Paper, 2025</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">TBD</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <p class="publication-title">Business Cycle Sector Rotation with Machine Learning</p>
+                    <p class="publication-authors">V. Azevedo, <b>Dennis Jung</b></p>
+                    <p class="publication-venue">Working Paper, 2025</p>
+                    <div class="publication-links">
+                        <a href="#" target="_blank">TBD</a>
+                    </div>
+                </div>
+                
+                <div class="publication">
+                    <p class="publication-title">Robust Portfolio Optimization Tool in Python</p>
+                    <p class="publication-authors"><b>Dennis Jung</b></p>
+                    <p class="publication-venue">Coding Project, 2024</p>
+                    <div class="publication-links">
+                        <a href="https://github.com/Codes-Dennis-Jung/Robust_Portfolio_Optimization" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="education">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <p class="edu-date">2021 - Present</p>
+                    <p class="edu-degree">PhD in Finance</p>
+                    <p class="edu-institution">Technical University of Darmstadt, Germany</p>
+                    <p>Thesis: "Machine Learning in Asset Pricing" (Advisor: Prof. Dr. Dirk Schiereck)</p>
+                </div>
+                
+                <div class="education-item">
+                    <p class="edu-date">2012 - 2015</p>
+                    <p class="edu-degree">M.Sc. Business & Engineering, Major Finance & Economics</p>
+                    <p class="edu-institution">University of Technology Clausthal, Germany</p>
+                    <p>Thesis: "Multi-Asset Allocation Models Compared - An Empirical Analysis of Portfolio Optimization and Naive Investment Strategies" (GPA: 1.8 / 1st class)</p>
+                </div>
+                
+                <div class="education-item">
+                    <p class="edu-date">2014 - 2015</p>
+                    <p class="edu-degree">M.Sc. Finance and Economic Analysis (Study Abroad - ERASMUS)</p>
+                    <p class="edu-institution">Tallinn University of Technology, Estonia</p>
+                    <p>GPA: 1.0 / 1st class</p>
+                </div>
+                
+                <div class="education-item">
+                    <p class="edu-date">2013 - 2013</p>
+                    <p class="edu-degree">M.Sc. Economics and Finance (Study Abroad - Scholarship)</p>
+                    <p class="edu-institution">University of Luxembourg, Luxembourg</p>
+                    <p>GPA: 2.3 / 1st class</p>
+                </div>
+                
+                <div class="education-item">
+                    <p class="edu-date">2009 - 2012</p>
+                    <p class="edu-degree">B.Sc. Business & Engineering</p>
+                    <p class="edu-institution">University of Applied Sciences Saarbrücken, Germany</p>
+                    <p>GPA: 2.5 / 2nd class</p>
+                </div>
+                
+                <div class="education-item">
+                    <p class="edu-date">2010 - 2011</p>
+                    <p class="edu-degree">B.Sc. Business and Technology (Study Abroad - ERASMUS)</p>
+                    <p class="edu-institution">University of Lodz, Poland</p>
+                    <p>GPA: 1.0 / 1st class</p>
+                </div>
+            </section>
+            
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
+                <p class="section-intro">I bring 10+ years of practical experience in portfolio management to my academic research, creating a unique perspective that bridges industry practice and theoretical frameworks.</p>
+                
+                <div class="experience-item">
+                    <p class="exp-date">February 2023 - Present</p>
+                    <p class="exp-role">Executive Director | Asset Allocation</p>
+                    <p class="exp-organization">Quintet Private Bank, Luxembourg</p>
+                    <p>Led strategic and tactical asset allocation processes, coordinating a team of strategists and overseeing monthly investment cycles. Developed tailor-made portfolio management services for ultra-high-net-worth individuals and served as a voting member of the Bank's Risk Assessment Council.</p>
+                    <p>Key achievements:</p>
+                    <ul>
+                        <li>Launched a high-quality, tailor-made portfolio management service, generating net new money.</li>
+                        <li>Developed proprietary analytical tools, including dashboards and fair value models.</li>
+                        <li>Enhanced cross-functional portfolio management service improvements.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <p class="exp-date">August 2021 - January 2023</p>
+                    <p class="exp-role">Senior Investment Advisor</p>
+                    <p class="exp-organization">Banque Internationale à Luxembourg, Luxembourg</p>
+                    <p>Provided comprehensive portfolio guidance to private clients and family offices, designing factor-based stock selection processes and streamlining client segmentation for targeted service delivery.</p>
+                    <p>Key achievements:</p>
+                    <ul>
+                        <li>Increased client retention through streamlined, client-centric portfolios.</li>
+                        <li>Led implementation of an advisory stock selection process with high penetration rates.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <p class="exp-date">July 2019 - July 2021</p>
+                    <p class="exp-role">Fixed Income Portfolio Manager</p>
+                    <p class="exp-organization">Deka Investment GmbH, Frankfurt</p>
+                    <p>Managed €2.8 billion in fixed income portfolios for institutional clients, specializing in sovereign, supras, and corporate bonds. Developed and launched an emerging market hard currency strategy.</p>
+                    <p>Key achievements:</p>
+                    <ul>
+                        <li>Won a €100 million multi-sector fixed income portfolio mandate.</li>
+                        <li>Optimized risk-adjusted returns through comprehensive research.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <p class="exp-date">July 2016 - September 2018</p>
+                    <p class="exp-role">Multi Asset Portfolio Manager</p>
+                    <p class="exp-organization">H&A Lampe Private Bank AG, Frankfurt</p>
+                    <p>Managed €1.5 billion across multi-asset UCITS funds and segregated accounts, implementing risk overlay strategies to mitigate drawdowns.</p>
+                    <p>Key achievements:</p>
+                    <ul>
+                        <li>Enhanced portfolio protection during market volatility.</li>
+                        <li>Developed tactical global cross-asset investment views.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <p class="exp-date">October 2015 - June 2016</p>
+                    <p class="exp-role">Client Relationship Manager - External Consultant</p>
+                    <p class="exp-organization">Janus Henderson Investors Ltd., Frankfurt</p>
+                    <p>Conducted portfolio risk and performance analysis for product pitches and built a SQL database for a CRM system.</p>
+                    <p>Key achievements:</p>
+                    <ul>
+                        <li>Implemented multi-channel sales strategies in EMEA.</li>
+                        <li>Coordinated exhibition appearances in Frankfurt and Zurich.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <p class="exp-date">January 2011 - August 2014</p>
+                    <p class="exp-role">Working Student, Asset Management | Consulting | Industry</p>
+                    <p class="exp-organization">Various (Lyxor, Deka, PwC, RWE), Germany & Luxembourg</p>
+                    <p>Supported sales, fund management, marketing research, and portfolio management tasks across multiple organizations.</p>
+                </div>
+            </section>
+            
+            <section id="contact">
+                <h2>Contact</h2>
+                
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:denris_rene_jung@yahoo.com">denris_rene_jung@yahoo.com</a></p>
+                    <p>🏢 Office: Technical University of Darmstadt, Department of Finance</p>
+                    <p>📍 Address: Im Blumenfeld 65, 66740 Saarlouis, Germany</p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/Codes-Dennis-Jung" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/dennis-jung-78545672" target="_blank">LinkedIn</a>
+                    <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7491541" target="_blank">SSRN</a>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 Dennis Jung. Last updated: May 2025.</p>
+            <p>This website is built using HTML/CSS and hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
+        </footer>
+    </body>
+</html>
